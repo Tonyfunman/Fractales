@@ -6,7 +6,28 @@
 int main()
 {
     /* TODO */
+	int i;
+	struct fractal *tabfracts = malloc(sizeof(struct fractal * 1000));
+	struct fractal *tabcandid = malloc(sizeof(struct fractal * 4));
+	struct linkedfractal *maxfract = malloc(sizeof(struct fractal))
 
+	if (tabfracts == NULL || tabcandid == NULL)
+	{
+		//retourne erreur
+	}
+
+	pthread_t thread[5];
+
+	pthread_create(thread[4], NULL, compare_to_max, (void*)tabcandid);
+	pthread_join(thread[4], linked)//jsp comment gérer la liste chainée
+
+	for (i = 0; i < 4; i++) {
+		pthread_create(thread[i], NULL, fractal_compute_averageandtable, (void*)tabfracts);
+	}
+
+	for (i = 0; i < 4; ++i) {
+		pthread_join(threads[i], (void**)&tabcandid[i]);
+	}
 
 
     /*
@@ -23,6 +44,8 @@ int main()
     */
 
     // etape1: traitement du fichier
+
+
 
     int fichier;
     fichier = open("fractale.txt")

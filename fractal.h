@@ -1,6 +1,12 @@
 #ifndef _FRACTAL_H
 #define _FRACTAL_H
 
+
+struct linkedfractals {
+	struct fractal *f;
+	struct fractal *next;
+};
+
 struct fractal {
     /* TODO: à remplir */
     const char *name;
